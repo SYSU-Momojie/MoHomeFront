@@ -2,7 +2,14 @@
   <div id="app">
     <particles-background/>
     <image-previewer/>
-    <router-view/>
+    <el-container>
+      <el-main>
+        <router-view />
+      </el-main>
+      <el-footer class="beian">
+        <a href="http://www.beian.miit.gov.cn/">粤ICP备20063378号</a>
+      </el-footer>
+    </el-container>
   </div>
 </template>
 

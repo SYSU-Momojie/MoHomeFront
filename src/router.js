@@ -1,19 +1,24 @@
 import Router from 'vue-router'
 
-import LoginPage from './pages/LoginPage'
-import BlogPage from './pages/BlogPage'
+import LoginPage from './pages/LoginPage';
+import BlogPage from './pages/BlogPage';
 import QuantPage from "./pages/QuantPage";
+import MainPage from "./pages/MainPage";
 
-import BlogList from './components/blog/BlogList'
-import Gallery from './components/blog/Gallery'
-import UploadPic from './components/blog/UploadPic'
-import PostArticle from './components/blog/PostArticle'
-import ArticleContent from './components/blog/ArticleContent'
+import BlogList from './components/blog/BlogList';
+import Gallery from './components/blog/Gallery';
+import UploadPic from './components/blog/UploadPic';
+import PostArticle from './components/blog/PostArticle';
+import ArticleContent from './components/blog/ArticleContent';
 
 import ManualImport from "./components/quant/ManualImport";
 
 let router = new Router({
     routes: [
+        {
+            path: '/',
+            component: MainPage
+        },
         {
             path: '/login',
             component: LoginPage

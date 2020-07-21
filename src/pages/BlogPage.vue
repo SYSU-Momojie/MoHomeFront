@@ -1,20 +1,23 @@
 <template>
-  <div class="main-page-container">
-    <div class="menu">
+  <el-container class="main-page-container">
+    <el-header class="menu">
       <el-menu :default-active="activeIndex" class="navbar-menu half-width" mode="horizontal" :router="true">
         <el-menu-item index="/blog/blog-list">Blog</el-menu-item>
         <el-menu-item index="/blog/gallery">Gallery</el-menu-item>
         <el-menu-item index="/blog/uploadPic" v-if="isAdmin">Upload</el-menu-item>
         <el-menu-item index="/blog/postArticle" v-if="isAdmin">Post</el-menu-item>
       </el-menu>
-    </div>
+    </el-header>
 
-    <div class="page-content">
+    <el-main class="page-content">
       <router-view class="half-width"/>
-    </div>
+    </el-main>
 
-    <page-footer/>
-  </div>
+    <el-footer>
+      <page-footer/>
+    </el-footer>
+
+  </el-container>
 </template>
 
 <script>
